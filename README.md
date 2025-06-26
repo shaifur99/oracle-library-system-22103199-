@@ -1,80 +1,159 @@
-University Library Management System
+ University Library Management System
+This repository contains a comprehensive database system designed and implemented for a University Library Management System.
 
 
-This repository contains a comprehensive database system designed and implemented for a University Library Management System. Developed as the final assignment for the Database (MySQL/Oracle/SQL Server) course, this project focuses specifically on Oracle Database to manage core library operations efficiently.
+Developed as the final assignment for the Database Management Systems (DBMS) course, this project focuses specifically on Oracle Database to manage core library operations efficiently and securely.
 
-The system aims to provide a robust solution for tracking books, managing member information, and handling all borrowing and return transactions within a university library environment.
+
+ Project Objectives
+
+ 
+The system aims to provide a robust, scalable, and secure solution for:
+
+Tracking library books
+
+Managing member information
+
+Handling book borrowing and return transactions
 
 
 
 Project Overview
 
 
-The project encompasses the complete lifecycle of database development, from schema design and data population to complex querying, procedural programming (PL/SQL), and fundamental database administration tasks. It demonstrates proficiency in SQL for data manipulation and retrieval, as well as the creation of stored procedures, functions, and triggers for enhanced functionality and automation.
+The project covers the entire lifecycle of database development, including:
 
-Key Features and Functionalities
-This database system supports the following core functionalities:
+Schema design & normalization
 
+Data population with realistic test entries
 
+Advanced querying techniques
 
-Comprehensive Data Management:
+Procedural programming using PL/SQL
 
-
-Books: Stores detailed information about library books, including title, author, publisher, ISBN, category, and availability.
-
-Members: Manages university member details (students, faculty, staff), including contact information and membership types.
-
-Transactions: Records all borrowing and return activities, tracking issue dates, due dates, return dates, fines, and transaction status.
+Core database administration tasks
 
 
 
-Advanced Querying Capabilities:
+It demonstrates proficiency in:
 
 
 
-Data Retrieval: Efficiently retrieve information on book availability, overdue books, most borrowed items, and member borrowing patterns.
+SQL (DML, DDL, DCL, TCL)
 
-Data Manipulation: Includes functionalities for updating fine amounts, inserting new members, archiving old transactions, and updating book categories dynamically.
+Joins & subqueries
 
-Complex Joins: Utilizes INNER JOIN, LEFT JOIN, SELF JOIN, and CROSS JOIN to combine data from multiple tables for comprehensive reporting and analysis (e.g., transaction history with member/book details, books never borrowed, member borrowing trends).
+PL/SQL (procedures, functions, triggers)
 
-Subqueries: Employs subqueries for advanced data filtering and aggregation, such as identifying highly borrowed books, members with high fine amounts, and the second most active member.
+Indexing & performance tuning
 
-Aggregate & Window Functions: Leverages SUM, COUNT, RANK(), NTILE(), and LAG() to calculate running totals of fines, rank member activity, determine category contributions, and analyze borrowing trends over time.
 
-PL/SQL Automation & Business Logic:
 
-ISSUE_BOOK Stored Procedure: Automates the book issuing process by checking availability, creating transaction records, and updating book copies, with built-in exception handling.
+Key Features & Functionalities
 
-CALCULATE_FINE Function: A reusable function to calculate overdue fines based on the transaction ID and a daily fine rate.
 
-UPDATE_AVAILABLE_COPIES Trigger: An automated trigger that fires upon a book's return, ensuring available_copies are accurately updated in real-time.
 
-Database Administration:
+1.  Comprehensive Data Management
+Books
 
-User Management: Sets up distinct user roles (librarian and student_user) with appropriate, restricted privileges to ensure data security and integrity.
+Stores details: title, author, publisher, ISBN, category, available_copies
 
-Performance Optimization: Implements indexing on frequently queried columns and explores execution plans to identify and suggest strategies for improving database query performance.
+Members
+
+Handles all user types: students, faculty, staff
+
+Includes contact info, membership type
+
+Transactions
+
+Tracks borrow/return operations
+
+Manages issue date, return date, due date, fines, and status
+
+
+
+
+2.Advanced Querying Capabilities
+Data Retrieval
+
+
+Book availability, overdue items, most borrowed books
+
+Data Manipulation
+
+Update fines, insert new members, archive old data
+
+Joins Used
+
+INNER JOIN, LEFT JOIN, SELF JOIN, CROSS JOIN for reporting
+
+Subqueries
+
+Find most active members, high-fine users, least borrowed books
+
+Aggregates & Windows
+
+Use of SUM, COUNT, RANK(), NTILE(), LAG() for trends & stats
+
+
+
+3. PL/SQL Automation & Business Logic
+ISSUE_BOOK Procedure
+
+
+Checks book availability
+
+Inserts transaction record
+
+Decreases available copies
+
+Includes error handling
+
+CALCULATE_FINE Function
+
+Takes transaction ID
+
+Returns fine amount based on delay and daily rate
+
+UPDATE_AVAILABLE_COPIES Trigger
+
+Fires on return
+
+Automatically updates available_copies in the books table
+
+
+
+4. Database Administration
+User Management
+
+
+Roles: librarian, student_user
+
+Privilege control for secure access
+
+Performance Optimization
+
+Indexing high-frequency columns
+
+Analyzing execution plans
+
+Query tuning suggestions
+
 Technologies Used
+Component	Technology
+Database	Oracle Database
+Query Language	SQL
+Procedural Language	SQL
 
-
-Database System: Oracle Database
-
-Query Language: SQL
-
-Procedural Language: PL/SQL
 
 
 Repository Structure
 
-
-The repository is organized into a clear and logical structure to facilitate understanding and execution of the database components:
-
 oracle-library-system-[your-student-id]/
 │
-├── README.md               // Project documentation (this file)
+├── README.md               → Project documentation
 └── sql/
-    ├── setup.sql           // Contains DDL for table creation, constraints, relationships, and sample data insertion.
-    ├── queries.sql         // Houses all SQL queries from Parts 2 & 3, with detailed comments.
-    ├── plsql.sql           // Includes PL/SQL procedures, functions, and triggers.
-    └── admin.sql           // Scripts for user management and performance optimization (indexing).
+    ├── setup.sql           → DDL: Table creation, constraints, sample data
+    ├── queries.sql         → All queries (Part 2 & 3) with comments
+    ├── plsql.sql           → PL/SQL procedures, functions, triggers
+    └── admin.sql           → User management & indexing scripts
