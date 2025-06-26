@@ -225,4 +225,3 @@ Based on the assignment document, this implementation includes:
 
 ---
 
-This implementation demonstrates Oracle Database concepts including schema design, SQL operations, PL/SQL programming, and database administration for a comprehensive library management system.
