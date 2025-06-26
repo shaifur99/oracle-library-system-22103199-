@@ -1,4 +1,4 @@
-   University Library Management System
+*   University Library Management System
 This repository contains a comprehensive database system designed and implemented for a University Library Management System.
 
 
@@ -18,7 +18,7 @@ Handling book borrowing and return transactions
 
 
 
-   Project Overview
+   *Project Overview
 
 
 The project covers the entire lifecycle of database development, including:
@@ -35,7 +35,7 @@ Core database administration tasks
 
 
 
-   It demonstrates proficiency in:
+   * It demonstrates proficiency in:
 
 
 
@@ -49,11 +49,11 @@ Indexing & performance tuning
 
 
 
-   Key Features & Functionalities
+   * Key Features & Functionalities
 
 
 
-1.  Comprehensive Data Management
+  *Comprehensive Data Management
 Books
 
 Stores details: title, author, publisher, ISBN, category, available_copies
@@ -73,7 +73,7 @@ Manages issue date, return date, due date, fines, and status
 
 
 
-   Advanced Querying Capabilities
+   *Advanced Querying Capabilities
 Data Retrieval
 
 
@@ -96,7 +96,7 @@ Aggregates & Windows
 Use of SUM, COUNT, RANK(), NTILE(), LAG() for trends & stats
 
 
-   PL/SQL Automation & Business Logic
+   * PL/SQL Automation & Business Logic
 ISSUE_BOOK Procedure
 
 
@@ -122,7 +122,7 @@ Automatically updates available_copies in the books table
 
 
 
-   Database Administration
+   * Database Administration
 User Management
 
 
@@ -138,7 +138,7 @@ User Management
 
    Query tuning suggestions
 
-Technologies Used
+* Technologies Used
 
 Component	Technology
 Database	Oracle Database
@@ -147,7 +147,7 @@ Procedural Language	SQL
 
 
 
-Repository Structure
+* Repository Structure
 
 oracle-library-system-[your-student-id]/
 │
